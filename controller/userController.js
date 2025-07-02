@@ -33,9 +33,9 @@ exports.loginController = async (req, res) => {
 
   
     const token = jwt.sign(
-      { userId: user._id }, // payload
-      process.env.JWT_SECRET || "your_jwt_secret", // secret
-      { expiresIn: "1d" } // options
+      { userId: user._id }, 
+      process.env.JWT_SECRET, 
+      { expiresIn: "1d" } 
     );
 
     return res.status(200).send({

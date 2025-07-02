@@ -7,7 +7,7 @@ const requireSignIn = (req, res, next) => {
       return res.status(401).send({ success: false, message: "Unauthorized" });
     }
     const decode = jwt.verify(token, process.env.JWT_SECRET || "your_jwt_secret");
-    req.user = decode; // adds `userId` to req.user
+    req.user = decode; 
     next();
   } catch (err) {
     console.log(err);
