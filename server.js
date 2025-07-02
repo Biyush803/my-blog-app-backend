@@ -32,6 +32,10 @@ app.use("/api/v1/blog", blogRoutes);
 //port
 const PORT = process.env.PORT || 9005;
 
+app.get("/", (req, res) => {
+  res.send("My Blog API is running");
+});
+
 
 
 app.listen(PORT, () => {
