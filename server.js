@@ -19,10 +19,10 @@ connectDB();
 const app = express();
 
 //middlewares
+// server.js
 app.use(
   cors({
-    origin: "https:my-blog-app-frontend-swart.vercel.app",
-    credentials: true,
+    origin: "https://my-blog-app-frontend-aejho4jl3-biyush803s-projects.vercel.app",
   })
 );
 
