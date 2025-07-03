@@ -10,14 +10,13 @@ dotenv.config();
 
 //router import
 const userRoutes = require("./routes/userRoutes");
-const blogRoutes = require("./routes/blogRoutes")
+const blogRoutes = require("./routes/blogRoutes");
 
 //mongodb connection
 connectDB();
 
 //rest object
 const app = express();
-
 
 //middlewares
 app.use(cors());
@@ -28,15 +27,12 @@ app.use(morgan("dev"));
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/blog", blogRoutes);
 
-
 //port
-const PORT = process.env.PORT || 9005;
+const PORT = process.env.PORT || 443;
 
 app.get("/", (req, res) => {
   res.send("My Blog API is running");
 });
-
-
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`.bgBlue.white);
