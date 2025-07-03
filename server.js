@@ -21,7 +21,7 @@ const app = express();
 //middlewares
 app.use(
   cors({
-    origin: " https:my-blog-app-frontend-swart.vercel.app",
+    origin: "https:my-blog-app-frontend-swart.vercel.app",
     credentials: true,
   })
 );
@@ -34,7 +34,7 @@ app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/blog", blogRoutes);
 
 //port
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.send("My Blog API is running");
