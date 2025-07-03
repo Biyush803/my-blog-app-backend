@@ -22,7 +22,8 @@ const app = express();
 // server.js
 app.use(
   cors({
-    origin: "https://my-blog-app-frontend-aejho4jl3-biyush803s-projects.vercel.app",
+    origin:
+      "https://vercel.com/biyush803s-projects/my-blog-app-frontend/JCPossL8xsvZ1PaoFx8PdPrQ7Lvi",
   })
 );
 
